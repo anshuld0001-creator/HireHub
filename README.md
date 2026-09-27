@@ -53,3 +53,69 @@ HireHub/
 ├── manage.py
 ├── requirements.txt
 └── README.md
+⚙️ Installation & Setup
+1. Clone the repository
+git clone https://github.com/YOUR-USERNAME/hirehub.git
+cd hirehub
+2. Create a virtual environment
+python -m venv venv
+3. Activate the virtual environment
+
+Windows:
+
+venv\Scripts\activate
+
+Linux/macOS:
+
+source venv/bin/activate
+4. Install dependencies
+pip install -r requirements.txt
+5. Run database migrations
+python manage.py migrate
+6. Start the development server
+python manage.py runserver
+
+Open your browser and visit:
+
+http://127.0.0.1:8000/
+🔑 Admin Panel
+
+To create a Django admin account:
+
+python manage.py createsuperuser
+
+Then visit:
+
+http://127.0.0.1:8000/admin/
+🎯 Project Objective
+
+The main objective of HireHub is to create a simple digital recruitment platform that makes it easier for employers to manage hiring activities and for job seekers to discover and apply for suitable opportunities.
+
+🚀 Future Improvements
+Advanced job search and filtering
+Resume upload and management
+Email notifications
+Employer dashboard
+Job recommendation system
+Application tracking
+AI-powered job recommendations
+Deployment with a production database
+👨‍💻 Developer
+
+Anshul Dubey
+
+📄 License
+
+This project is developed for educational and portfolio purposes.
+
+
+### GitHub par README kaise add karna hai
+
+Agar tum **Upload files** screen par ho, project ke root mein:
+
+**Add file → Create new file**
+
+Filename:
+
+```text
+README.md
