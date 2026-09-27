@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Register - HireHub{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="card auth-card p-4 p-md-5">
+    <div class="text-center mb-4">
+      <i class="bi bi-briefcase-fill text-primary fs-1"></i>
+      <h3 class="fw-bold mt-2">Create Your Account</h3>
+      <p class="text-muted">Join HireHub as a jobseeker or recruiter</p>
+    </div>
+    <form action="" method="post">
+      {% csrf_token %}
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="fname" class="form-label">First Name</label>
+          <input type="text" id="fname" name="fname" class="form-control" placeholder="John" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="lname" class="form-label">Last Name</label>
+          <input type="text" id="lname" name="lname" class="form-control" placeholder="Doe" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="john@example.com" required>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="gender" class="form-label">Gender</label>
+          <select name="gender" id="gender" class="form-select">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="pns" selected>Preferred Not to Say</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="utype" class="form-label">Register As</label>
+          <select name="utype" id="utype" class="form-select">
+            <option value="jobseeker">Jobseeker</option>
+            <option value="recruiter">Recruiter</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact Number</label>
+        <input type="text" id="contact" name="contact" class="form-control" placeholder="9876543210" required>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="cpwd" class="form-label">Confirm Password</label>
+          <input type="password" id="cpwd" name="cpwd" class="form-control" required>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 py-2 mt-2">Register</button>
+    </form>
+    <p class="text-center text-muted mt-4 mb-0 small">
+      Already have an account? <a href="{% url 'login' %}" class="text-decoration-none">Login here</a>
+    </p>
+  </div>
+</div>
+{% endblock %}
