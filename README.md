@@ -109,11 +109,7 @@ Anshul Dubey
 This project is developed for educational and portfolio purposes.
 
 
-### GitHub par README kaise add karna hai
 
-Agar tum **Upload files** screen par ho, project ke root mein:
-
-**Add file → Create new file**
 
 Filename:
 
